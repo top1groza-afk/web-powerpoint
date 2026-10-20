@@ -1,0 +1,2052 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff6b35">
+  <title>Orange Slide Studio | PowerPoint đẹp mỗi ngày</title>
+  <meta name="description" content="Khám phá mẫu PowerPoint đẹp, tải slide thuyết trình, học thiết kế slide và nâng cấp bài thuyết trình của bạn.">
+
+  <style>
+    :root {
+      --orange: #ff6b35;
+      --orange-dark: #e95320;
+      --orange-light: #fff0e8;
+      --white: #ffffff;
+      --background: #fffaf7;
+      --text: #242424;
+      --muted: #777777;
+      --border: #f0e5df;
+      --shadow: 0 12px 35px rgba(100, 52, 24, 0.08);
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: var(--background);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button, input, select {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: auto;
+    }
+
+    .announcement {
+      background: var(--orange);
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.7px;
+      white-space: nowrap;
+    }
+
+    .logo-icon {
+      display: grid;
+      place-items: center;
+      background: var(--orange);
+      color: white;
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      box-shadow: 0 6px 15px #ff6b3540;
+    }
+
+    .logo span:last-child {
+      color: var(--orange);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .nav-links a:hover {
+      color: var(--orange);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cart-button {
+      position: relative;
+      background: var(--orange-light);
+      color: var(--orange-dark);
+      border: none;
+      padding: 11px 15px;
+      border-radius: 12px;
+      font-weight: 750;
+    }
+
+    #cart-count {
+      background: var(--orange);
+      color: white;
+      padding: 2px 6px;
+      border-radius: 20px;
+      font-size: 11px;
+      margin-left: 3px;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--border);
+      background: white;
+      border-radius: 10px;
+      padding: 8px 12px;
+    }
+
+    .hero {
+      padding: 76px 0 66px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 85% 15%, #ffdec9 0, transparent 27%),
+        radial-gradient(circle at 10% 90%, #fff0e6 0, transparent 30%),
+        var(--background);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--orange-dark);
+      padding: 8px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5.2vw, 66px);
+      line-height: 1.08;
+      letter-spacing: -2.5px;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: var(--orange);
+    }
+
+    .hero-description {
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: none;
+      padding: 13px 20px;
+      border-radius: 12px;
+      font-weight: 750;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--orange);
+      color: white;
+      box-shadow: 0 8px 20px #ff6b3530;
+    }
+
+    .button-primary:hover {
+      background: var(--orange-dark);
+    }
+
+    .button-secondary {
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 27px;
+      margin-top: 35px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 22px;
+    }
+
+    .stat small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .hero-art {
+      position: relative;
+      padding: 22px;
+    }
+
+    .slide-preview {
+      background: white;
+      padding: 14px;
+      border-radius: 23px;
+      box-shadow: 0 25px 70px #803e1a1a;
+      transform: rotate(2deg);
+      position: relative;
+      z-index: 2;
+    }
+
+    .slide-canvas {
+      aspect-ratio: 4 / 3;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #ff7c45, #ffb16e);
+      color: white;
+      padding: 9%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide-canvas::after {
+      content: "";
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      border: 35px solid #ffffff25;
+      border-radius: 50%;
+      right: -75px;
+      bottom: -100px;
+    }
+
+    .slide-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .slide-canvas h2 {
+      font-size: clamp(28px, 4vw, 45px);
+      line-height: 1.05;
+      letter-spacing: -1px;
+      max-width: 300px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .slide-canvas p {
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    .slide-mini-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 9px;
+      margin-top: 12px;
+    }
+
+    .slide-mini {
+      background: #fff1e9;
+      border-radius: 9px;
+      height: 52px;
+      padding: 8px;
+    }
+
+    .slide-mini::before,
+    .slide-mini::after {
+      content: "";
+      display: block;
+      height: 5px;
+      border-radius: 10px;
+      background: #ffc19f;
+      margin-bottom: 6px;
+    }
+
+    .slide-mini::after {
+      width: 60%;
+      background: #ffdcc9;
+    }
+
+    .floating-note {
+      position: absolute;
+      background: white;
+      box-shadow: var(--shadow);
+      border-radius: 14px;
+      padding: 12px 16px;
+      font-size: 12px;
+      font-weight: 750;
+      z-index: 3;
+    }
+
+    .note-one {
+      top: 0;
+      right: -5px;
+    }
+
+    .note-two {
+      bottom: 5px;
+      left: -5px;
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .section-kicker {
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(27px, 4vw, 39px);
+      line-height: 1.2;
+      letter-spacing: -1.2px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 490px;
+      margin-top: 9px;
+      font-size: 14px;
+    }
+
+    .text-link {
+      color: var(--orange-dark);
+      font-weight: 750;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .benefit {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 23px;
+      border-radius: 17px;
+    }
+
+    .benefit-icon {
+      width: 45px;
+      height: 45px;
+      background: var(--orange-light);
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .benefit h3 {
+      font-size: 15px;
+      margin-bottom: 7px;
+    }
+
+    .benefit p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .products-section {
+      background: white;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 230px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      border: 1px solid var(--border);
+      padding: 13px 15px 13px 42px;
+      border-radius: 12px;
+      outline: none;
+      background: var(--background);
+    }
+
+    .search-box input:focus {
+      border-color: var(--orange);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 11px;
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-button {
+      border: 1px solid var(--border);
+      background: white;
+      border-radius: 10px;
+      padding: 10px 13px;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .filter-button.active,
+    .filter-button:hover {
+      background: var(--orange);
+      color: white;
+      border-color: var(--orange);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .product-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: white;
+      transition: 0.25s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .product-image {
+      min-height: 200px;
+      aspect-ratio: 1.45 / 1;
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-image::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: #ffffff30;
+      right: -45px;
+      top: -55px;
+    }
+
+    .cover-orange {
+      background: linear-gradient(135deg, #ff773f, #ffba81);
+    }
+
+    .cover-purple {
+      background: linear-gradient(135deg, #6655c8, #c4a7ff);
+    }
+
+    .cover-blue {
+      background: linear-gradient(135deg, #2d79c7, #88d9ff);
+    }
+
+    .cover-green {
+      background: linear-gradient(135deg, #268c69, #a3e5b7);
+    }
+
+    .cover-pink {
+      background: linear-gradient(135deg, #df6595, #ffc1d9);
+    }
+
+    .cover-dark {
+      background: linear-gradient(135deg, #263044, #68758c);
+    }
+
+    .cover-paper {
+      width: 75%;
+      max-width: 235px;
+      min-height: 142px;
+      background: #ffffffed;
+      border-radius: 8px;
+      padding: 17px;
+      box-shadow: 0 10px 25px #00000015;
+      transform: rotate(-3deg);
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover-paper small {
+      color: var(--orange-dark);
+      font-weight: 850;
+      font-size: 8px;
+      letter-spacing: 1.5px;
+    }
+
+    .cover-paper h3 {
+      margin-top: 11px;
+      font-size: 21px;
+      line-height: 1.08;
+      letter-spacing: -0.7px;
+    }
+
+    .cover-paper p {
+      font-size: 9px;
+      margin-top: 8px;
+      color: #777;
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      background: white;
+      color: var(--orange-dark);
+      font-size: 10px;
+      font-weight: 850;
+      padding: 6px 9px;
+      border-radius: 8px;
+      z-index: 3;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-category {
+      color: var(--orange-dark);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .product-info h3 {
+      font-size: 17px;
+      line-height: 1.35;
+      margin: 7px 0;
+    }
+
+    .product-description {
+      color: var(--muted);
+      font-size: 12px;
+      min-height: 40px;
+    }
+
+    .product-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .price {
+      color: var(--orange-dark);
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .old-price {
+      font-size: 11px;
+      color: #999;
+      text-decoration: line-through;
+      margin-left: 5px;
+    }
+
+    .product-format {
+      font-size: 10px;
+      background: #f7f7f7;
+      padding: 5px 8px;
+      border-radius: 7px;
+      color: #666;
+    }
+
+    .product-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .product-actions .button {
+      padding: 10px 12px;
+      font-size: 12px;
+      flex: 1;
+    }
+
+    .button-outline {
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      color: var(--muted);
+      padding: 35px;
+      background: var(--background);
+      border-radius: 14px;
+    }
+
+    .tutorial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .tutorial-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      overflow: hidden;
+      transition: 0.2s;
+    }
+
+    .tutorial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .tutorial-thumb {
+      height: 155px;
+      display: grid;
+      place-items: center;
+      font-size: 48px;
+      background: var(--orange-light);
+    }
+
+    .tutorial-card:nth-child(2) .tutorial-thumb {
+      background: #f0edff;
+    }
+
+    .tutorial-card:nth-child(3) .tutorial-thumb {
+      background: #e8f7ee;
+    }
+
+    .tutorial-content {
+      padding: 20px;
+    }
+
+    .tutorial-content small {
+      color: var(--orange-dark);
+      font-weight: 800;
+      font-size: 11px;
+    }
+
+    .tutorial-content h3 {
+      font-size: 17px;
+      line-height: 1.4;
+      margin: 8px 0;
+    }
+
+    .tutorial-content p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .affiliate-section {
+      background: #fff2e9;
+    }
+
+    .affiliate-notice {
+      font-size: 12px;
+      color: #765c50;
+      margin-top: 8px;
+    }
+
+    .affiliate-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .affiliate-card {
+      background: white;
+      border: 1px solid #f5dfd2;
+      border-radius: 17px;
+      padding: 23px;
+    }
+
+    .affiliate-card .benefit-icon {
+      background: #fff0e8;
+    }
+
+    .affiliate-card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .affiliate-card p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .cta {
+      padding: 0 0 78px;
+      background: white;
+    }
+
+    .cta-box {
+      background: linear-gradient(120deg, #ff6b35, #ff925f);
+      color: white;
+      border-radius: 25px;
+      padding: 44px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .cta-box h2 {
+      font-size: clamp(25px, 4vw, 36px);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .cta-box p {
+      color: #fff2e9;
+      font-size: 14px;
+      max-width: 560px;
+    }
+
+    .cta-box .button {
+      background: white;
+      color: var(--orange-dark);
+      white-space: nowrap;
+    }
+
+    footer {
+      background: #241c19;
+      color: white;
+      padding: 45px 0 22px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 35px;
+      padding-bottom: 30px;
+    }
+
+    .footer-brand p {
+      color: #c2b7b2;
+      font-size: 13px;
+      margin-top: 15px;
+      max-width: 320px;
+    }
+
+    footer h3 {
+      font-size: 14px;
+      margin-bottom: 13px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 9px;
+      color: #c2b7b2;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #423632;
+      padding-top: 18px;
+      color: #a99b95;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: #1b120fcc;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal {
+      background: white;
+      width: min(520px, 100%);
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 25px 80px #00000030;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .modal-header h2 {
+      font-size: 22px;
+    }
+
+    .close-button {
+      background: #f5f5f5;
+      border: none;
+      border-radius: 9px;
+      width: 36px;
+      height: 36px;
+      font-size: 20px;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+    }
+
+    .cart-item h4 {
+      font-size: 14px;
+    }
+
+    .cart-item p {
+      color: var(--orange-dark);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .remove-button {
+      background: #fff0e8;
+      color: var(--orange-dark);
+      border: none;
+      border-radius: 8px;
+      padding: 7px 9px;
+      font-size: 11px;
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: 850;
+      padding: 20px 0;
+    }
+
+    .modal .button {
+      width: 100%;
+    }
+
+    .notice-box {
+      background: #fff6ed;
+      border: 1px solid #ffe2ce;
+      color: #80533d;
+      padding: 13px;
+      border-radius: 10px;
+      font-size: 12px;
+      margin: 15px 0;
+    }
+
+    .admin-form {
+      display: grid;
+      gap: 12px;
+    }
+
+    .admin-form label {
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .admin-form input,
+    .admin-form select {
+      width: 100%;
+      padding: 11px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      margin-top: 5px;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 22px;
+      left: 50%;
+      transform: translate(-50%, 20px);
+      background: #29211d;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.25s;
+      z-index: 300;
+      width: max-content;
+      max-width: 90%;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    .admin-trigger {
+      color: #c2b7b2;
+      font-size: 12px;
+      border: none;
+      background: transparent;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 14px;
+        font-size: 12px;
+      }
+
+      .hero-grid {
+        gap: 25px;
+      }
+
+      .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .tutorial-grid,
+      .affiliate-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .tutorial-card:last-child,
+      .affiliate-card:last-child {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        min-height: 66px;
+      }
+
+      .logo {
+        font-size: 17px;
+      }
+
+      .logo-icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 18px 5%;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .cart-button {
+        padding: 9px 10px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 48px 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-art {
+        max-width: 490px;
+        width: 100%;
+        margin: 10px auto 0;
+      }
+
+      h1 {
+        letter-spacing: -1.7px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .benefit-grid {
+        gap: 10px;
+      }
+
+      .benefit {
+        padding: 16px;
+      }
+
+      .product-grid,
+      .tutorial-grid,
+      .affiliate-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-image {
+        min-height: 220px;
+      }
+
+      .tutorial-card:last-child,
+      .affiliate-card:last-child {
+        grid-column: auto;
+      }
+
+      .toolbar {
+        align-items: stretch;
+      }
+
+      .search-box {
+        min-width: 100%;
+      }
+
+      .filters {
+        width: 100%;
+      }
+
+      .filter-button {
+        flex: 1;
+      }
+
+      .cta {
+        padding-bottom: 55px;
+      }
+
+      .cta-box {
+        padding: 28px;
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    ✨ Khám phá ý tưởng mới và tạo nên những bài thuyết trình ấn tượng!
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="logo" aria-label="Orange Slide Studio trang chủ">
+        <span class="logo-icon">▤</span>
+        <span>Orange <span>Slide Studio</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#home">Trang chủ</a>
+        <a href="#products">Mẫu PowerPoint</a>
+        <a href="#tutorials">Hướng dẫn</a>
+        <a href="#resources">Tài nguyên</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-button" id="open-cart">
+          🛒 Giỏ hàng <span id="cart-count">0</span>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Mở menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">✦ KHÔNG GIAN SÁNG TẠO POWERPOINT</div>
+          <h1>Biến ý tưởng thành <span>slide ấn tượng.</span></h1>
+          <p class="hero-description">
+            Khám phá mẫu PowerPoint chuyên nghiệp, tải bộ slide tiện dụng
+            và học cách thiết kế bài thuyết trình đẹp mắt, dễ hiểu.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#products" class="button button-primary">Khám phá mẫu slide →</a>
+            <a href="#tutorials" class="button button-secondary">Học thiết kế miễn phí</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>01</strong>
+              <small>Ý tưởng của bạn</small>
+            </div>
+            <div class="stat">
+              <strong>02</strong>
+              <small>Thiết kế dễ dùng</small>
+            </div>
+            <div class="stat">
+              <strong>03</strong>
+              <small>Thuyết trình tự tin</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="floating-note note-one">🎨 Thiết kế sáng tạo</div>
+          <div class="slide-preview">
+            <div class="slide-canvas">
+              <div class="slide-label">ORANGE SLIDE STUDIO</div>
+              <h2>IDEAS<br>INTO<br>IMPACT.</h2>
+              <p>Present your ideas beautifully.</p>
+            </div>
+            <div class="slide-mini-row">
+              <div class="slide-mini"></div>
+              <div class="slide-mini"></div>
+              <div class="slide-mini"></div>
+            </div>
+          </div>
+          <div class="floating-note note-two">✦ Đơn giản mà nổi bật</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">Vì sao chọn chúng tôi?</div>
+            <h2>Thiết kế slide dễ dàng hơn</h2>
+            <p>Mọi thứ bạn cần để bắt đầu một bài thuyết trình chỉn chu.</p>
+          </div>
+        </div>
+
+        <div class="benefit-grid">
+          <article class="benefit">
+            <div class="benefit-icon">🖥️</div>
+            <h3>Mẫu đa dạng</h3>
+            <p>Ý tưởng cho học tập, kinh doanh, báo cáo và nhiều chủ đề khác.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon">⚡</div>
+            <h3>Dễ tùy chỉnh</h3>
+            <p>Thay đổi nội dung, màu sắc và hình ảnh theo nhu cầu của bạn.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon">📚</div>
+            <h3>Học từng bước</h3>
+            <p>Bài hướng dẫn giúp bạn cải thiện kỹ năng thiết kế slide.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon">✨</div>
+            <h3>Trình bày rõ ràng</h3>
+            <p>Chú trọng bố cục, khả năng đọc và cách truyền tải thông điệp.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">Bộ sưu tập nổi bật</div>
+            <h2>Tìm mẫu PowerPoint của bạn</h2>
+            <p>Các sản phẩm bên dưới là dữ liệu minh họa. Hãy thay bằng file và đường dẫn thật của bạn.</p>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div class="search-box">
+            <span class="search-icon">🔎</span>
+            <input id="product-search" type="search" placeholder="Tìm mẫu slide, chủ đề..." aria-label="Tìm sản phẩm">
+          </div>
+
+          <div class="filters" id="filters">
+            <button class="filter-button active" data-category="all">Tất cả</button>
+            <button class="filter-button" data-category="study">Học tập</button>
+            <button class="filter-button" data-category="business">Kinh doanh</button>
+            <button class="filter-button" data-category="creative">Sáng tạo</button>
+          </div>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+      </div>
+    </section>
+
+    <section id="tutorials">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">Góc học tập</div>
+            <h2>Học làm PowerPoint đẹp</h2>
+            <p>Bắt đầu từ các nguyên tắc cơ bản rồi từng bước nâng cao kỹ năng.</p>
+          </div>
+          <a href="#resources" class="text-link">Xem tài nguyên →</a>
+        </div>
+
+        <div class="tutorial-grid">
+          <article class="tutorial-card">
+            <div class="tutorial-thumb">🎨</div>
+            <div class="tutorial-content">
+              <small>THIẾT KẾ CƠ BẢN</small>
+              <h3>5 nguyên tắc tạo slide đẹp và dễ đọc</h3>
+              <p>Học cách chọn màu sắc, phông chữ và sắp xếp thông tin rõ ràng.</p>
+              <a href="#resources" class="text-link">Khám phá bài học →</a>
+            </div>
+          </article>
+
+          <article class="tutorial-card">
+            <div class="tutorial-thumb">📊</div>
+            <div class="tutorial-content">
+              <small>TRÌNH BÀY DỮ LIỆU</small>
+              <h3>Cách biến số liệu thành biểu đồ dễ hiểu</h3>
+              <p>Chọn biểu đồ phù hợp để thông tin trở nên trực quan hơn.</p>
+              <a href="#resources" class="text-link">Khám phá bài học →</a>
+            </div>
+          </article>
+
+          <article class="tutorial-card">
+            <div class="tutorial-thumb">✨</div>
+            <div class="tutorial-content">
+              <small>MẸO POWERPOINT</small>
+              <h3>Tạo bố cục chuyên nghiệp từ trang trắng</h3>
+              <p>Xây dựng bố cục nhất quán và nhấn mạnh thông điệp chính.</p>
+              <a href="#resources" class="text-link">Khám phá bài học →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="affiliate-section" id="resources">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">Tài nguyên hữu ích</div>
+            <h2>Công cụ cho người làm slide</h2>
+            <p>Đặt liên kết đến công cụ, tài nguyên hoặc sản phẩm mà bạn muốn giới thiệu.</p>
+            <p class="affiliate-notice">
+              Một số liên kết có thể là liên kết tiếp thị. Bạn nên thông báo rõ nếu có thể nhận hoa hồng từ giao dịch đủ điều kiện.
+            </p>
+          </div>
+        </div>
+
+        <div class="affiliate-grid" id="affiliate-grid"></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h2>Sẵn sàng tạo bài thuyết trình nổi bật?</h2>
+            <p>Chọn một mẫu phù hợp, tùy chỉnh nội dung và bắt đầu kể câu chuyện của bạn bằng slide.</p>
+          </div>
+          <a href="#products" class="button">Tìm mẫu PowerPoint →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-icon">▤</span>
+            <span>Orange <span>Slide Studio</span></span>
+          </a>
+          <p>
+            Không gian dành cho những người yêu thích PowerPoint,
+            thiết kế slide và trình bày ý tưởng sáng tạo.
+          </p>
+        </div>
+
+        <div>
+          <h3>Khám phá</h3>
+          <div class="footer-links">
+            <a href="#products">Mẫu PowerPoint</a>
+            <a href="#tutorials">Hướng dẫn</a>
+            <a href="#resources">Tài nguyên</a>
+            <a href="#home">Về trang chủ</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Thông tin</h3>
+          <div class="footer-links">
+            <a href="#" data-info="terms">Điều khoản sử dụng</a>
+            <a href="#" data-info="privacy">Chính sách riêng tư</a>
+            <a href="#" data-info="contact">Liên hệ</a>
+            <button class="admin-trigger" id="open-admin">Quản lý nội dung demo</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Orange Slide Studio.</span>
+        <span>Thiết kế bằng cảm hứng màu cam 🧡</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="cart-title">🛒 Giỏ hàng của bạn</h2>
+        <button class="close-button" data-close="cart-modal" aria-label="Đóng">×</button>
+      </div>
+      <div id="cart-items"></div>
+      <div class="cart-total">
+        <span>Tổng cộng</span>
+        <span id="cart-total">0 ₫</span>
+      </div>
+      <div class="notice-box">
+        Đây là giỏ hàng demo. Website chưa thu tiền, chưa tạo đơn hàng và chưa cung cấp file tải xuống tự động.
+      </div>
+      <button class="button button-primary" id="checkout-button">Tiếp tục mua hàng</button>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="detail-title">Thông tin sản phẩm</h2>
+        <button class="close-button" data-close="detail-modal" aria-label="Đóng">×</button>
+      </div>
+      <div id="detail-content"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="admin-modal" role="dialog" aria-modal="true" aria-labelledby="admin-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="admin-title">Quản lý nội dung demo</h2>
+        <button class="close-button" data-close="admin-modal" aria-label="Đóng">×</button>
+      </div>
+
+      <div class="notice-box">
+        Khu vực này chỉ minh họa giao diện thêm sản phẩm. Không có đăng nhập hay bảo mật. Không nhập thông tin bí mật hoặc dữ liệu nhạy cảm.
+      </div>
+
+      <form class="admin-form" id="admin-form">
+        <label>
+          Tên sản phẩm
+          <input name="title" required maxlength="100" placeholder="Ví dụ: Bộ slide thuyết trình">
+        </label>
+        <label>
+          Giá (VNĐ)
+          <input name="price" type="number" min="0" step="1000" required placeholder="99000">
+        </label>
+        <label>
+          Danh mục
+          <select name="category">
+            <option value="study">Học tập</option>
+            <option value="business">Kinh doanh</option>
+            <option value="creative">Sáng tạo</option>
+          </select>
+        </label>
+        <label>
+          Mô tả
+          <input name="description" maxlength="180" placeholder="Mô tả ngắn về sản phẩm">
+        </label>
+        <label>
+          Đường dẫn sản phẩm (tùy chọn)
+          <input name="url" type="url" placeholder="https://example.com/file">
+        </label>
+        <button class="button button-primary" type="submit">Thêm sản phẩm demo</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="info-modal" role="dialog" aria-modal="true" aria-labelledby="info-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="info-title">Thông tin</h2>
+        <button class="close-button" data-close="info-modal" aria-label="Đóng">×</button>
+      </div>
+      <div id="info-content"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // ==========================================
+    // 1. DỮ LIỆU SẢN PHẨM MẪU
+    // Thay tên, giá, mô tả và URL bằng dữ liệu thật.
+    // ==========================================
+
+    const products = [
+      {
+        id: 1,
+        title: "Bộ slide thuyết trình học tập",
+        category: "study",
+        categoryName: "Học tập",
+        price: 49000,
+        oldPrice: 79000,
+        badge: "PHỔ BIẾN",
+        theme: "cover-orange",
+        coverTitle: "STUDY SMART",
+        description: "Mẫu slide phù hợp cho bài thuyết trình trên lớp và dự án học tập.",
+        format: "PPTX",
+        url: ""
+      },
+      {
+        id: 2,
+        title: "Bộ slide kinh doanh hiện đại",
+        category: "business",
+        categoryName: "Kinh doanh",
+        price: 99000,
+        oldPrice: 149000,
+        badge: "NỔI BẬT",
+        theme: "cover-purple",
+        coverTitle: "BUSINESS PLAN",
+        description: "Bố cục dành cho ý tưởng kinh doanh, kế hoạch và báo cáo dự án.",
+        format: "PPTX",
+        url: ""
+      },
+      {
+        id: 3,
+        title: "Slide báo cáo dữ liệu",
+        category: "business",
+        categoryName: "Kinh doanh",
+        price: 69000,
+        oldPrice: 99000,
+        badge: "DỄ DÙNG",
+        theme: "cover-blue",
+        coverTitle: "DATA STORY",
+        description: "Bố cục minh họa biểu đồ, số liệu và kết quả phân tích.",
+        format: "PPTX",
+        url: ""
+      },
+      {
+        id: 4,
+        title: "Bộ slide sáng tạo tối giản",
+        category: "creative",
+        categoryName: "Sáng tạo",
+        price: 59000,
+        oldPrice: 89000,
+        badge: "TỐI GIẢN",
+        theme: "cover-pink",
+        coverTitle: "CREATIVE IDEAS",
+        description: "Phong cách tối giản dành cho ý tưởng, portfolio và dự án cá nhân.",
+        format: "PPTX",
+        url: ""
+      },
+      {
+        id: 5,
+        title: "Slide thuyết trình khoa học",
+        category: "study",
+        categoryName: "Học tập",
+        price: 45000,
+        oldPrice: 65000,
+        badge: "HỌC TẬP",
+        theme: "cover-green",
+        coverTitle: "SCIENCE LAB",
+        description: "Gợi ý bố cục cho đề tài nghiên cứu, báo cáo và dự án khoa học.",
+        format: "PPTX",
+        url: ""
+      },
+      {
+        id: 6,
+        title: "Slide portfolio chuyên nghiệp",
+        category: "creative",
+        categoryName: "Sáng tạo",
+        price: 79000,
+        oldPrice: 119000,
+        badge: "PORTFOLIO",
+        theme: "cover-dark",
+        coverTitle: "MY PORTFOLIO",
+        description: "Trình bày dự án, kỹ năng và ý tưởng trong một bố cục nhất quán.",
+        format: "PPTX",
+        url: ""
+      }
+    ];
+
+    // ==========================================
+    // 2. CÁC LIÊN KẾT TÀI NGUYÊN / TIẾP THỊ
+    // Chỉ dùng URL thật của bạn hoặc đối tác.
+    // ==========================================
+
+    const resources = [
+      {
+        icon: "🖥️",
+        title: "Microsoft PowerPoint",
+        description: "Công cụ tạo và chỉnh sửa bài thuyết trình.",
+        label: "Truy cập công cụ",
+        url: "https://www.microsoft.com/microsoft-365/powerpoint"
+      },
+      {
+        icon: "🎨",
+        title: "Canva",
+        description: "Tham khảo công cụ thiết kế và mẫu trình bày.",
+        label: "Khám phá Canva",
+        url: "https://www.canva.com/"
+      },
+      {
+        icon: "📚",
+        title: "Thư viện ý tưởng",
+        description: "Đặt liên kết đến blog, khóa học hoặc tài nguyên của bạn.",
+        label: "Thêm liên kết của bạn",
+        url: ""
+      }
+    ];
+
+    // ==========================================
+    // 3. TRẠNG THÁI WEBSITE DEMO
+    // ==========================================
+
+    let activeCategory = "all";
+    let cart = [];
+    let toastTimer;
+
+    const productGrid = document.getElementById("product-grid");
+    const searchInput = document.getElementById("product-search");
+
+    const money = amount =>
+      new Intl.NumberFormat("vi-VN", {
+        style: "currency",
+        currency: "VND",
+        maximumFractionDigits: 0
+      }).format(amount);
+
+    function escapeHTML(value) {
+      return String(value ?? "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[char]);
+    }
+
+    function safeURL(value) {
+      try {
+        const parsed = new URL(value);
+        if (parsed.protocol === "https:" || parsed.protocol === "http:") {
+          return parsed.href;
+        }
+      } catch (_) {}
+      return "";
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("show"), 2600);
+    }
+
+    function openModal(id) {
+      document.getElementById(id).classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove("open");
+
+      if (!document.querySelector(".modal-backdrop.open")) {
+        document.body.style.overflow = "";
+      }
+    }
+
+    function renderProducts() {
+      const keyword = searchInput.value.trim().toLowerCase();
+
+      const filtered = products.filter(product => {
+        const matchesCategory =
+          activeCategory === "all" || product.category === activeCategory;
+
+        const matchesKeyword =
+          (product.title + " " + product.description + " " + product.categoryName)
+            .toLowerCase()
+            .includes(keyword);
+
+        return matchesCategory && matchesKeyword;
+      });
+
+      if (!filtered.length) {
+        productGrid.innerHTML =
+          '<div class="empty-state">Không tìm thấy sản phẩm phù hợp. Hãy thử từ khóa khác.</div>';
+        return;
+      }
+
+      productGrid.innerHTML = filtered.map(product => `
+        <article class="product-card">
+          <div class="product-image ${escapeHTML(product.theme)}">
+            <span class="product-badge">${escapeHTML(product.badge)}</span>
+            <div class="cover-paper">
+              <small>ORANGE SLIDE STUDIO</small>
+              <h3>${escapeHTML(product.coverTitle)}</h3>
+              <p>Presentation template collection</p>
+            </div>
+          </div>
+
+          <div class="product-info">
+            <div class="product-category">${escapeHTML(product.categoryName)}</div>
+            <h3>${escapeHTML(product.title)}</h3>
+            <p class="product-description">${escapeHTML(product.description)}</p>
+
+            <div class="product-meta">
+              <div>
+                <span class="price">${money(product.price)}</span>
+                <span class="old-price">${money(product.oldPrice)}</span>
+              </div>
+              <span class="product-format">${escapeHTML(product.format)}</span>
+            </div>
+
+            <div class="product-actions">
+              <button class="button button-outline" data-detail="${product.id}">
+                Chi tiết
+              </button>
+              <button class="button button-primary" data-add="${product.id}">
+                + Thêm giỏ
+              </button>
+            </div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderResources() {
+      const grid = document.getElementById("affiliate-grid");
+
+      grid.innerHTML = resources.map(resource => {
+        const url = safeURL(resource.url);
+
+        return `
+          <article class="affiliate-card">
+            <div class="benefit-icon">${escapeHTML(resource.icon)}</div>
+            <h3>${escapeHTML(resource.title)}</h3>
+            <p>${escapeHTML(resource.description)}</p>
+            ${
+              url
+                ? `<a class="button button-primary"
+                      href="${escapeHTML(url)}"
+                      target="_blank"
+                      rel="noopener noreferrer sponsored">
+                      ${escapeHTML(resource.label)} ↗
+                   </a>`
+                : `<button class="button button-outline"
+                           data-resource-missing>
+                     Thêm liên kết
+                   </button>`
+            }
+          </article>
+        `;
+      }).join("");
+    }
+
+    function renderCart() {
+      document.getElementById("cart-count").textContent = cart.length;
+
+      const itemsContainer = document.getElementById("cart-items");
+      const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+      document.getElementById("cart-total").textContent = money(total);
+
+      if (!cart.length) {
+        itemsContainer.innerHTML =
+          '<div class="empty-state">Giỏ hàng đang trống. Hãy chọn một mẫu PowerPoint nhé!</div>';
+        return;
+      }
+
+      itemsContainer.innerHTML = cart.map((item, index) => `
+        <div class="cart-item">
+          <div>
+            <h4>${escapeHTML(item.title)}</h4>
+            <p>${money(item.price)}</p>
+          </div>
+          <button class="remove-button" data-remove="${index}">Xóa</button>
+        </div>
+      `).join("");
+    }
+
+    function addToCart(id) {
+      const product = products.find(item => item.id === Number(id));
+      if (!product) return;
+
+      cart.push(product);
+      renderCart();
+      showToast("Đã thêm sản phẩm vào giỏ hàng!");
+    }
+
+    function showProductDetail(id) {
+      const product = products.find(item => item.id === Number(id));
+      if (!product) return;
+
+      document.getElementById("detail-title").textContent = product.title;
+
+      const url = safeURL(product.url);
+
+      document.getElementById("detail-content").innerHTML = `
+        <div class="product-image ${escapeHTML(product.theme)}"
+             style="border-radius:14px;margin-bottom:20px">
+          <div class="cover-paper">
+            <small>ORANGE SLIDE STUDIO</small>
+            <h3>${escapeHTML(product.coverTitle)}</h3>
+            <p>Presentation template collection</p>
+          </div>
+        </div>
+
+        <p class="product-category">${escapeHTML(product.categoryName)}</p>
+        <p style="margin:10px 0 15px">${escapeHTML(product.description)}</p>
+        <p class="price" style="margin-bottom:18px">${money(product.price)}</p>
+
+        ${
+          url
+            ? `<a class="button button-outline"
+                  href="${escapeHTML(url)}"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Mở liên kết sản phẩm ↗
+               </a>`
+            : `<div class="notice-box">
+                 Bạn chưa thiết lập đường dẫn tải file cho sản phẩm này.
+                 Hãy thêm URL thật trong mảng products ở phần JavaScript.
+               </div>`
+        }
+
+        <button class="button button-primary"
+                style="margin-top:12px"
+                data-add="${product.id}">
+          + Thêm vào giỏ hàng
+        </button>
+      `;
+
+      openModal("detail-modal");
+    }
+
+    // ==========================================
+    // 4. SỰ KIỆN TƯƠNG TÁC
+    // ==========================================
+
+    searchInput.addEventListener("input", renderProducts);
+
+    document.getElementById("filters").addEventListener("click", event => {
+      const button = event.target.closest("[data-category]");
+      if (!button) return;
+
+      activeCategory = button.dataset.category;
+
+      document.querySelectorAll(".filter-button").forEach(item => {
+        item.classList.toggle("active", item === button);
+      });
+
+      renderProducts();
+    });
+
+    document.addEventListener("click", event => {
+      const addButton = event.target.closest("[data-add]");
+      if (addButton) {
+        addToCart(addButton.dataset.add);
+        return;
+      }
+
+      const detailButton = event.target.closest("[data-detail]");
+      if (detailButton) {
+        showProductDetail(detailButton.dataset.detail);
+        return;
+      }
+
+      const removeButton = event.target.closest("[data-remove]");
+      if (removeButton) {
+        cart.splice(Number(removeButton.dataset.remove), 1);
+        renderCart();
+        showToast("Đã xóa sản phẩm khỏi giỏ hàng.");
+        return;
+      }
+
+      const closeButton = event.target.closest("[data-close]");
+      if (closeButton) {
+        closeModal(closeButton.dataset.close);
+        return;
+      }
+
+      if (event.target.matches(".modal-backdrop")) {
+        closeModal(event.target.id);
+        return;
+      }
+
+      if (event.target.closest("[data-resource-missing]")) {
+        showToast("Hãy thay URL trống trong mảng resources.");
+      }
+    });
+
+    document.getElementById("open-cart").addEventListener("click", () => {
+      renderCart();
+      openModal("cart-modal");
+    });
+
+    document.getElementById("checkout-button").addEventListener("click", () => {
+      closeModal("cart-modal");
+      showToast("Đây là bản demo. Cần tích hợp thanh toán để bán hàng thật.");
+    });
+
+    document.getElementById("menu-toggle").addEventListener("click", () => {
+      document.getElementById("nav-links").classList.toggle("open");
+    });
+
+    document.querySelectorAll("#nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("nav-links").classList.remove("open");
+      });
+    });
+
+    document.getElementById("open-admin").addEventListener("click", () => {
+      openModal("admin-modal");
+    });
+
+    document.getElementById("admin-form").addEventListener("submit", event => {
+      event.preventDefault();
+
+      const form = new FormData(event.currentTarget);
+      const title = String(form.get("title") || "").trim();
+      const price = Number(form.get("price"));
+      const description = String(form.get("description") || "").trim();
+      const category = String(form.get("category") || "study");
+      const url = safeURL(String(form.get("url") || "").trim());
+
+      if (!title || !Number.isFinite(price) || price < 0) {
+        showToast("Vui lòng nhập tên sản phẩm và giá hợp lệ.");
+        return;
+      }
+
+      const categoryNames = {
+        study: "Học tập",
+        business: "Kinh doanh",
+        creative: "Sáng tạo"
+      };
+
+      const themes = {
+        study: "cover-orange",
+        business: "cover-purple",
+        creative: "cover-pink"
+      };
+
+      products.unshift({
+        id: Date.now(),
+        title,
+        category,
+        categoryName: categoryNames[category] || "Khác",
+        price,
+        oldPrice: price,
+        badge: "MỚI",
+        theme: themes[category] || "cover-orange",
+        coverTitle: title.slice(0, 28).toUpperCase(),
+        description: description || "Sản phẩm PowerPoint mới.",
+        format: "PPTX",
+        url
+      });
+
+      renderProducts();
+      closeModal("admin-modal");
+      event.currentTarget.reset();
+      showToast("Đã thêm sản phẩm demo vào trang.");
+    });
+
+    // Các thông tin pháp lý là nội dung mẫu, cần chỉnh sửa theo hoạt động thật.
+    const infoContent = {
+      terms: {
+        title: "Điều khoản sử dụng",
+        text: "Hãy cập nhật điều khoản mua bán, giấy phép sử dụng file, chính sách hoàn tiền và trách nhiệm của người mua trước khi website hoạt động chính thức."
+      },
+      privacy: {
+        title: "Chính sách riêng tư",
+        text: "Hãy bổ sung thông tin về dữ liệu được thu thập, mục đích sử dụng, thời gian lưu trữ và cách người dùng yêu cầu hỗ trợ. Không sử dụng nội dung mẫu này thay cho chính sách pháp lý đã được rà soát."
+      },
+      contact: {
+        title: "Liên hệ",
+        text: "Thay nội dung này bằng email hỗ trợ hoặc kênh liên hệ chính thức của bạn trước khi công khai website."
+      }
+    };
+
+    document.querySelectorAll("[data-info]").forEach(link => {
+      link.addEventListener("click", event => {
+        event.preventDefault();
+        const info = infoContent[link.dataset.info];
+        if (!info) return;
+
+        document.getElementById("info-title").textContent = info.title;
+        document.getElementById("info-content").textContent = info.text;
+        openModal("info-modal");
+      });
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        document.querySelectorAll(".modal-backdrop.open").forEach(modal => {
+          closeModal(modal.id);
+        });
+      }
+    });
+
+    // ==========================================
+    // 5. KHỞI TẠO WEBSITE
+    // ==========================================
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    renderProducts();
+    renderResources();
+    renderCart();
+  </script>
+</body>
+</html>
+```
